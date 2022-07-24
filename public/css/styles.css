@@ -1,0 +1,119 @@
+/* Nesting */
+/* SCSS */
+nav {
+  font-size: 1em;
+  font-weight: bold;
+  float: left;
+  width: 100%;
+}
+nav ul {
+  list-style-type: none;
+}
+#left {
+  float: left;
+}
+nav ul li {
+  margin: 0 5px;
+  color: white;
+}
+#right {
+  float: right;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Variables */
+html {
+  font-size: 1em;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, Sans-Serif;
+  background: #daaa0e;
+}
+
+header {
+  height: 50px;
+  width: 1350px;
+  margin: 0.8em auto 1em auto;
+}
+
+main {
+  background: white;
+  width: 1350px;
+  min-height: 535px;
+  padding: 1.5%;
+  margin: 0 auto;
+}
+main #intro-image {
+  float: left;
+  width: 800px;
+}
+main #intro-image img {
+  width: 800px;
+}
+main #intro-text {
+  width: 550px;
+  height: 407px;
+  float: left;
+  background: #d4d5d8;
+  text-align: center;
+  padding-top: 8em;
+}
+main #intro-text h3 {
+  font-size: 2em;
+  color: #313130;
+}
+main #intro-text span {
+  font-family: "Sacramento", cursive;
+  font-size: 2em;
+}
+
+footer {
+  width: 1350px;
+  margin: 2em auto;
+  padding-left: 80px;
+  font-size: 0.85em;
+}
+
+button, .submit-buttton {
+  color: white;
+  width: 100px;
+  height: 40px;
+  background: #daaa0e;
+  margin-top: 2em;
+}
+
+.submit-buttton {
+  border: 1px #313130;
+}
+
+/*# sourceMappingURL=styles.css.map */
+
+form h3 {
+  width: 306px;
+  text-align: center;
+}
+#register_form {
+  margin-left: 800px;
+  margin-top: 100px;
+}
+input {
+  margin-bottom: 20px;
+  width: 300px;
+}
+#submit {
+  margin-top: 10px;
+  width: 306px;
+  color: white;
+  height: 30px;
+  background: #daaa0e;
+  border: none;
+  padding: 0px;
+}
