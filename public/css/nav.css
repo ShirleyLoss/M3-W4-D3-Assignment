@@ -1,17 +1,35 @@
-/* Error: Undefined variable.
- *    ,
- * 17 |             color: $color4;
- *    |                    ^^^^^^^
- *    '
- *   scss/nav.scss 17:20  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 17 \2502              color: $color4;\a    \2502                     ^^^^^^^\a    \2575 \a   scss/nav.scss 17:20  root stylesheet";
+/* Nesting */
+/* SCSS */
+nav {
+  font-size: 1em;
+  font-weight: bold;
+  float: left;
 }
+nav ul {
+  list-style-type: none;
+  width: 1300px;
+}
+nav ul .left {
+  float: left;
+  margin: 0 5px 0 0;
+  color: rgb(255, 255, 255);
+}
+nav ul .left a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+nav ul .left a:hover {
+  text-decoration: underline;
+}
+nav ul .right {
+  float: right;
+  margin: 0 10px 0px 0px;
+  color: rgb(255, 255, 255);
+}
+nav ul .right a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+nav ul .right a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=nav.css.map */

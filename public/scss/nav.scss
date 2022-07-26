@@ -1,0 +1,34 @@
+@import "colors.scss";
+@import "variables.scss";
+/* Nesting */
+
+
+/* SCSS */
+
+nav {
+    font: {
+        size: 1em;
+        weight: bold;
+    }
+    float: left;
+    ul {
+        list-style-type: none;
+        width: 1300px;
+        .left {
+            float: left;
+            margin: 0 5px 0 0;
+            color: $mainColor;
+            a {
+                @include navA;
+           }
+        }
+        .right {
+            float: right;
+            margin: 0 10px 0px 0px;
+            color: $mainColor;
+            a {
+                @include navA;
+           }
+        }
+   }
+}

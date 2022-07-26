@@ -1,0 +1,7 @@
+@mixin navA {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+   }
+   color: $mainColor;
+}
