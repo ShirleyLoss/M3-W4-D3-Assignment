@@ -12,7 +12,16 @@ const basic = auth.basic({
 
 router.get('/', (req, res) => {
   //res.send('It works!');
-  res.render('form', { title: 'Registration form' });
+  res.render('index', {
+    title: 'Registration form'
+  });
+});
+
+router.get('/register', (req, res) => {
+  //res.send('It works!');
+  res.render('register', {
+    title: 'Registration form'
+  });
 });
 
 router.get('/registrations', basic.check((req, res) => {
