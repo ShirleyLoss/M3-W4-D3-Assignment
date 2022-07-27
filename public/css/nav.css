@@ -3,33 +3,24 @@
 nav {
   font-size: 1em;
   font-weight: bold;
-  float: left;
 }
 nav ul {
   list-style-type: none;
-  width: 1300px;
+  display: flex;
+  padding-right: 40px;
 }
-nav ul .left {
-  float: left;
+nav ul li {
   margin: 0 5px 0 0;
   color: rgb(255, 255, 255);
 }
-nav ul .left a {
+nav ul li a {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
-nav ul .left a:hover {
+nav ul li a:hover {
   text-decoration: underline;
 }
-nav ul .right {
-  float: right;
-  margin: 0 10px 0px 0px;
-  color: rgb(255, 255, 255);
-}
-nav ul .right a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-nav ul .right a:hover {
-  text-decoration: underline;
+nav ul li:last-child {
+  flex-grow: 2;
+  text-align: right;
 }/*# sourceMappingURL=nav.css.map */

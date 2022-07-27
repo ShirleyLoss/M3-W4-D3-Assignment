@@ -3,35 +3,97 @@
 nav {
   font-size: 1em;
   font-weight: bold;
-  float: left;
 }
 nav ul {
   list-style-type: none;
-  width: 1300px;
+  display: flex;
+  padding-right: 40px;
 }
-nav ul .left {
-  float: left;
+nav ul li {
   margin: 0 5px 0 0;
   color: rgb(255, 255, 255);
 }
-nav ul .left a {
+nav ul li a {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
-nav ul .left a:hover {
+nav ul li a:hover {
   text-decoration: underline;
 }
-nav ul .right {
-  float: right;
-  margin: 0 10px 0px 0px;
-  color: rgb(255, 255, 255);
+nav ul li:last-child {
+  flex-grow: 2;
+  text-align: right;
 }
-nav ul .right a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
+
+/* css for registration form and errors*/
+/* Styles for listing table */
+body {
+  padding: 40px 10px;
+  background-color: #eee;
 }
-nav ul .right a:hover {
-  text-decoration: underline;
+
+.listing-reg h1 {
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.form-registration {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-registration input {
+  width: 100%;
+  margin: 0px 0 10px;
+}
+.form-registration .submit-button {
+  border: none;
+  background-color: rgb(218, 170, 14);
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.my-errors {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
+  color: #333;
+  font-size: 1.2rem;
+  display: table;
+}
+.my-errors li:before {
+  content: "! Error : ";
+  color: #f00;
+  font-weight: bold;
+}
+
+.listing-table {
+  width: 100%;
+}
+.listing-table th {
+  padding: 10px;
+  border-bottom: 1px solid #666;
+  background: #000;
+  color: #fff;
+}
+.listing-table th:first-child {
+  border-right: 1px solid #666;
+}
+.listing-table td {
+  padding: 10px;
+  border-bottom: 1px solid #666;
+}
+.listing-table td:first-child {
+  border-right: 1px solid #666;
+}
+
+.form-title {
+  text-align: center;
+  font-weight: 700;
 }
 
 /* Variables */
@@ -57,21 +119,26 @@ main {
   min-height: 535px;
   padding: 1.5%;
   margin: 0 auto;
+  display: flex;
 }
 main #intro-image {
-  float: left;
-  width: 800px;
+  flex-grow: 2;
 }
 main #intro-image img {
   width: 800px;
 }
+main #intro-image h2 {
+  text-align: center;
+}
 main #intro-text {
-  width: 550px;
-  height: 407px;
-  float: left;
   background: rgb(212, 213, 216);
   text-align: center;
-  padding-top: 8em;
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+main #intro-text > div {
+  width: 100%;
 }
 main #intro-text h3 {
   font-size: 2em;
@@ -95,4 +162,8 @@ button, .submit-buttton {
   height: 40px;
   background: rgb(218, 170, 14);
   margin-top: 2em;
+}
+
+.submit-buttton {
+  border: 1px rgb(49, 49, 48);
 }/*# sourceMappingURL=styles.css.map */

@@ -1,7 +1,5 @@
-@import "colors.scss";
-@import "variables.scss";
 /* Nesting */
-
+@import "colors.scss";
 
 /* SCSS */
 
@@ -10,25 +8,26 @@ nav {
         size: 1em;
         weight: bold;
     }
-    float: left;
+    // float: left;
     ul {
         list-style-type: none;
-        width: 1300px;
-        .left {
-            float: left;
+        display: flex;
+        padding-right: 40px;
+        li {
+            // float: left;
             margin: 0 5px 0 0;
-            color: $mainColor;
+            color: $color4;
             a {
-                @include navA;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+               }
+               color: $color4;
            }
-        }
-        .right {
-            float: right;
-            margin: 0 10px 0px 0px;
-            color: $mainColor;
-            a {
-                @include navA;
-           }
-        }
+       }
+       li:last-child {
+        flex-grow: 2;
+        text-align: right;
+       }
    }
 }

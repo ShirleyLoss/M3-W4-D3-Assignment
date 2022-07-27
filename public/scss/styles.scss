@@ -1,5 +1,6 @@
 @import "colors.scss";
 @import "nav.scss";
+@import "form.scss";
 
 /* Variables */
 $fontFamily1: Arial, Helvetica, Sans-Serif;
@@ -30,26 +31,38 @@ header {
 main {
     background: $mainColor;
     width: 1350px;
-    min-height:535px;
+    min-height: 535px;
     padding: 1.5%;
     margin: 0 auto;
+    display: flex;
 
     #intro-image {
-      float: left;
-      width: 800px;
-
+      // float: left;
+      flex-grow: 2;
+      // padding: 0 10px;
       img {
         width: 800px;
+      }
+      h2 {
+        text-align: center;
       }
     }
 
     #intro-text {
-      width: 550px;
-      height: 407px;
-      float:left;
+      // width: 550px;
+      // height: 407px;
+      // float:left;
       background: $sectionColor;
       text-align: center;
-      padding-top: 8em;
+      display: flex;
+      align-items: center;
+      // padding: 0 10px;
+      width: 40%;
+      // padding-top: 8em;
+
+      > div {
+          width: 100%;
+      }
 
       h3 {
         font-size: $fontSizeH3;
@@ -72,7 +85,7 @@ footer {
 
 // @extend 
 button {
-  color: $mainColor;
+  color: $color4;
   width: 100px;
   height: 40px;
   background: $backgroundColor1;
@@ -80,5 +93,5 @@ button {
 }
 .submit-buttton {
   @extend button;
-  // border: 1px $color3;
+  border: 1px $color3;
 }

@@ -1,38 +1,31 @@
-extends layout
+-data = data || {}
 
-block content
-
-    -data = data || {}
-
-    if errors
-        ul.my-errors
+if errors
+    ul.my-errors
         for error in errors
             li= error.msg
-    
-    h4 
-        | Register to subscribe
+h3.form-title Register to subscribe 
+form(action="/register" method="POST" class="form-registration")
+    label(for="name") Name:
+    input(
+        type="text"
+        id="name"
+        name="name"
+        class="form-control"
+        value=data.name
+    )
 
-    form(action="." method="POST" class="form-registration")
-        label(for="name") Name:
-        input(
-            type="text"
-            id="name"
-            name="name"
-            class="form-control"
-            value=data.name
-        )
+    label(for="email") Email:
+    input(
+        type="email"
+        id="email"
+        name="email"
+        class="form-control"
+        value=data.email
+    )
 
-        label(for="email") Email:
-        input(
-            type="email"
-            id="email"
-            name="email"
-            class="form-control"
-            value=data.email
-        )
-
-        input(
-            type="submit" 
-            value="Submit"
-            class="btn btn-lg btn-primary btn-block"
-        )
+    input(
+        type="submit" 
+        value="Submit"
+        class="btn btn-lg btn-primary btn-block"
+    )

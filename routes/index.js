@@ -12,29 +12,30 @@ const basic = auth.basic({
 
 router.get('/', (req, res) => {
   //res.send('It works!');
-  res.render('index', {
-    title: 'Registration form'
-  });
+  res.render('index', { title: 'home page', path: req.url });
 });
 
 router.get('/register', (req, res) => {
   //res.send('It works!');
-  res.render('register', {
-    title: 'Registration form'
-  });
+  res.render('index', { title: 'register page', path: req.url });
 });
 
 router.get('/registrations', basic.check((req, res) => {
   Registration.find()
     .then((registrations) => {
-      res.render('index', { title: 'Listing registrations', registrations });
+      res.render('registrants', { title: 'Listing registrations', registrations });
     })
     .catch(() => { 
       res.send('Sorry! Something went wrong.'); 
     });
 }));
 
-router.post('/', 
+router.get('/thankyou', (req, res) => {
+  //res.send('It works!');
+  res.render('index', { title: 'thankyou page', path: req.url, content: "Thank you for your registration!" });
+});
+
+router.post('/register', 
     [
         check('name')
         .isLength({ min: 1 })
@@ -49,14 +50,15 @@ router.post('/',
         if (errors.isEmpty()) {
           const registration = new Registration(req.body);
           registration.save()
-            .then(() => {res.send('Thank you for your registration!');})
+            .then(() => {res.redirect('/thankyou');})
             .catch((err) => {
               console.log(err);
               res.send('Sorry! Something went wrong.');
             });
           } else {
-            res.render('form', { 
-                title: 'Registration form',
+            res.render('index', { 
+                title: 'register page',
+                path: req.url,
                 errors: errors.array(),
                 data: req.body,
              });
