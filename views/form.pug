@@ -24,6 +24,24 @@ form(action="/register" method="POST" class="form-registration")
         value=data.email
     )
 
+    label(for="username") Username:
+        input(
+            type="username"
+            id="username"
+            name="username"
+            class="form-control"
+            value=data.username
+        )
+
+        label(for="password") Password:
+        input(
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            value=data.password
+        )
+
     input(
         type="submit" 
         value="Submit"
